@@ -1,0 +1,10 @@
+{
+  "fileExtensions": {
+    "etmlm": "etmlm-icon"
+  },
+  "iconDefinitions": {
+    "etmlm-icon": {
+      "iconPath": "./icons/icon.svg"
+    }
+  }
+}

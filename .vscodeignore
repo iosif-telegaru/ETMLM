@@ -1,0 +1,9 @@
+.vscode/**
+.vscode-test/**
+node_modules/**
+etmlm-installer/**
+*.vsix
+.gitignore
+.git/**
+*.map
+**/.DS_Store

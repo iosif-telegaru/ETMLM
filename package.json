@@ -1,0 +1,103 @@
+{
+  "name": "etmlm-support",
+  "displayName": "ETMLM Advanced Studio",
+  "description": "Syntax highlighting, icon theme and language support for ETMLM (Enhanced Timed Multi Lyrics Markup), an advanced TTML-based format supporting up to 5 singer positions and 3 background vocal layers before/after the main line.",
+  "version": "1.0.0",
+  "publisher": "Iosif",
+  "license": "MIT",
+  "icon": "icons/marketplace-icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "etmlm",
+    "ttml",
+    "lyrics",
+    "syllable",
+    "syntax highlighting",
+    "xml"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iosif-telegaru/ETMLM.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iosif-telegaru/ETMLM/issues"
+  },
+  "homepage": "https://github.com/iosif-telegaru/ETMLM#readme",
+  "galleryBanner": {
+    "color": "#0C544B",
+    "theme": "dark"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "etmlm",
+        "aliases": ["ETMLM", "etmlm"],
+        "extensions": [".etmlm"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/icon.svg",
+          "dark": "./icons/icon.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "etmlm",
+        "scopeName": "text.xml.etmlm",
+        "path": "./syntaxes/etmlm.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "etmlm-icons",
+        "label": "ETMLM Icon Pack",
+        "path": "./icon-theme.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[etmlm]": {
+        "editor.tokenColorCustomizations": {
+          "textMateRules": [
+            {
+              "scope": "punctuation.definition.tag.ttml.etmlm",
+              "settings": { "foreground": "#0C544B" }
+            },
+            {
+              "scope": "entity.name.tag.ttml.etmlm",
+              "settings": { "foreground": "#0C544B" }
+            },
+            {
+              "scope": "punctuation.definition.tag.custom.etmlm",
+              "settings": { "foreground": "#10597A" }
+            },
+            {
+              "scope": "entity.name.tag.custom.etmlm",
+              "settings": { "foreground": "#10597A" }
+            },
+            {
+              "scope": "string.unquoted.lyrics.etmlm",
+              "settings": { "foreground": "#818F6F" }
+            },
+            {
+              "scope": "keyword.operator.assignment.xml",
+              "settings": { "foreground": "#818F6F" }
+            },
+            {
+              "scope": "entity.other.attribute-name.xml",
+              "settings": { "foreground": "#A33E74" }
+            },
+            {
+              "scope": "string.quoted.double.xml",
+              "settings": { "foreground": "#A33E3E" }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
