@@ -37,10 +37,10 @@ This extension provides:
 
 
 
-1. Run the `.bat` file **as admin** so you get the custom `.ico` for the ETMLM files on VSC.
+1. Run the `.bat` file **as admin** so you get the custom `.ico` for the ETMLM files.
 2. Install the extension (VSIX).
 3. Open or create a `.etmlm` file — syntax highlighting applies automatically.
-4. (Optional) Enable the **ETMLM Icon Pack** via `File > Preferences > File Icon Theme` to get the custom `.etmlm` file icon.
+4. (Optional) Enable the **ETMLM Icon Pack** via `Ctrl + K, Ctrl + T > ETMLM Dark` `Settings (bottom left corner) > Themes > Color Theme > ETMLM Dark`.
 
 
 
