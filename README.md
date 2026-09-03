@@ -24,7 +24,7 @@ This extension provides:
 
 * Syntax highlighting for `.etmlm` files, distinguishing:
 
-  * Classic TTML tags (`p`, `span`, `div`, `body`, `head`, `tt`, `metadata`, `ttm:agent`, ...).
+  * Classic TTML tags (`p`, `span`, `div`, `body`, `head`, `metadata`, `ttm:agent`, ...). The normal `<tt>` and `</tt>` start and end on TTML files has been changed to `<etmlm>` and `</etmlm>`.
   * Custom/new ETMLM tags (`brighten.word`, `role.positioning`, `text.render.live`, `composer:meta`, ...).
   * Lyric text content.
   * Attribute names, values and operators.
