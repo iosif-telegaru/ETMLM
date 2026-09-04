@@ -38,6 +38,11 @@ if %errorLevel% == 0 (
     reg add "HKCU\SOFTWARE\Classes\.etmlm" /v "PerceivedType" /t REG_SZ /d "xml" /f >nul
     reg add "HKCU\SOFTWARE\Classes\etmlm_file" /ve /t REG_SZ /d "Enhanced Timed Multi Lyric Markup" /f >nul
     reg add "HKCU\SOFTWARE\Classes\etmlm_file\DefaultIcon" /ve /t REG_SZ /d "\"%RUTADESTINO%\etmlm.ico\"" /f >nul
+
+    :: Force Windows Explorer to use your custom icon over the default VS Code layout
+    reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.etmlm\UserChoice" /v "Progid" /t REG_SZ /d "etmlm_file" /f >nul
+    reg add "HKCU\SOFTWARE\Classes\Applications\Code.exe\SupportedTypes" /v ".etmlm" /t REG_SZ /d "" /f >nul
+
     echo [ETMLM] Registry keys successfully injected.
 
     :: 4. Install the extension in Visual Studio Code & bind open command
