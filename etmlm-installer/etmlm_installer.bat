@@ -22,14 +22,25 @@ if %errorLevel% == 0 (
         exit /b
     )
 
-    :: 3. Inject HKLM keys into the Windows Registry
+   :: 3. Inject HKLM keys into the Windows Registry
     echo [ETMLM] Step 3: Injecting registry keys and file associations...
     reg add "HKLM\SOFTWARE\Classes\.etmlm" /ve /t REG_SZ /d "etmlm_file" /f >nul
     reg add "HKLM\SOFTWARE\Classes\.etmlm" /v "Content Type" /t REG_SZ /d "xml" /f >nul
     reg add "HKLM\SOFTWARE\Classes\.etmlm" /v "PerceivedType" /t REG_SZ /d "xml" /f >nul
     reg add "HKLM\SOFTWARE\Classes\etmlm_file" /ve /t REG_SZ /d "Enhanced Timed Multi Lyric Markup" /f >nul
     reg add "HKLM\SOFTWARE\Classes\etmlm_file\DefaultIcon" /ve /t REG_SZ /d "\"%RUTADESTINO%\etmlm.ico\"" /f >nul
+    reg add "HKCR\.etmlm" /ve /t REG_SZ /d "etmlm_file" /f >nul
+    reg add "HKCR\.etmlm" /v "Content Type" /t REG_SZ /d "xml" /f >nul
+    reg add "HKCR\.etmlm" /v "PerceivedType" /t REG_SZ /d "xml" /f >nul
+    reg add "HKCR\etmlm_file" /ve /t REG_SZ /d "Enhanced Timed Multi Lyric Markup" /f >nul
+    reg add "HKCR\etmlm_file\DefaultIcon" /ve /t REG_SZ /d "\"%RUTADESTINO%\etmlm.ico\"" /f >nul
+    reg add "HKCU\SOFTWARE\Classes\.etmlm" /ve /t REG_SZ /d "etmlm_file" /f >nul
+    reg add "HKCU\SOFTWARE\Classes\.etmlm" /v "Content Type" /t REG_SZ /d "xml" /f >nul
+    reg add "HKCU\SOFTWARE\Classes\.etmlm" /v "PerceivedType" /t REG_SZ /d "xml" /f >nul
+    reg add "HKCU\SOFTWARE\Classes\etmlm_file" /ve /t REG_SZ /d "Enhanced Timed Multi Lyric Markup" /f >nul
+    reg add "HKCU\SOFTWARE\Classes\etmlm_file\DefaultIcon" /ve /t REG_SZ /d "\"%RUTADESTINO%\etmlm.ico\"" /f >nul
     echo [ETMLM] Registry keys successfully injected.
+
 
     :: 4. Install the extension in Visual Studio Code
     echo [ETMLM] Step 4: Detecting and installing language support in VS Code...
